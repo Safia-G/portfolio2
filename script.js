@@ -8,11 +8,11 @@ var data = [
 		},
 		{
 			tag: 'p',
-			content: 'Formation actuelle d\'une durée de trois mois puis de deux mois de stage. ----------------------------------------------------------------------------'
+			content: 'Formation actuelle d\'une durée de cinq mois. '
 		}],
 		footer: 'It-Akademy, Villeurbanne'
 	},
-	{	
+	{
 		time: '2016-01-27',
 		header: 'Années 2016/2017',
 		body: [{
@@ -84,9 +84,27 @@ $(document).ready(function () {
 	$("#myTimeline").albeTimeline(data);
 	$("#list_parent li").on("click", function() {
 		var cible = $(this).find('a').attr("href");
-		$("html, body").animate({scrollTop: $(cible).offset().top}, 1850);
+	$("html, body").animate({scrollTop: $(cible).offset().top}, 1850);
 		return false;
 	})
-	console.log($("#first_screen"));
+
 });
 
+//Fonction pour redimensionner la page par rapport à la taille de l'écran
+function setSizes() {
+	/* General
+	$('.logo-content').css({'margin-top': '-'+($('.logo-content').height()/2)+'px'});
+	*/
+	//Profile
+	$('#profile').css({'height':($(window).height()) + 'px'});
+	$('#first_screen').css({'margin-top': '-'+($('#first_screen').height()/10)+'px'});
+	//Portfolio
+	//$('#timeline').css({'margin-top': '-'+($('#timeline').height()/10)+'px'});
+	//contact
+	$('#contact, .contact-content').css({'min-height':($(window).height()) + 'px'});
+}
+
+setSizes();
+$(window).resize(function() {
+	setSizes();
+});

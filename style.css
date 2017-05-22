@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Muli');
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300');
-@import "compass/css3";
 @import url(http://fonts.googleapis.com/css?family=Merriweather);
 
 * {
@@ -8,10 +7,10 @@
 	padding: 0;
 }
 html {
-	background-color: #D9BAD1; 
+	background-color: #D9BAD1;
 }
 header {
-	display: flex;	
+	display: flex;
 	flex-direction: row;
 	background-color: #574a54;
 	justify-content: space-between;
@@ -41,33 +40,27 @@ header li  {
 header a:hover {
 	color: pink;
 	font-weight: bolder;
-
 }
 header ul li {
 	margin-left: 50px;
 }
-#SafiaGobet span{
-	display:none;
-}
 main {
-	padding-top: 65px;
-	padding-bottom: 25px;
-	display: flex;
+	/*display: flex;
 	flex-direction: column;
 	justify-content: center;
-	align-items: center;
+	align-items: center;*/
 	color: white;
 }
 .titre {
 	display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-family: 'Open Sans', sans-serif;
-    text-align: center;
-    font-size: 60px;
-    font-variant: small-caps;
-    margin-top: 150px;
-    letter-spacing: 5px;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Open Sans', sans-serif;
+  text-align: center;
+  font-size: 60px;
+  font-variant: small-caps;
+  margin-top: 130px;
+  letter-spacing: 5px;
 }
 .titre span {
 	background-color: #72566B;
@@ -76,7 +69,7 @@ main {
 }
 
 main .picture {
-	margin-top: 150px;
+	margin-top: 30px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -87,12 +80,12 @@ main .picture img{
 .fleche {
 	display: flex;
 	flex-direction: column;
-	align-items: center;	
+	align-items: center;
 }
 .fleche_bas {
 	margin-top: 60px;
-    width: 0; 
-    height: 0; 
+    width: 0;
+    height: 0;
     border-left: 40px solid transparent;
     border-right: 40px solid transparent;
     border-top: 40px solid #574a54;
@@ -130,9 +123,9 @@ footer {
 	margin-left: 20px;
 	}
 	.titre {
-	font-size: 35px;	
+	font-size: 35px;
 	}
-	.picture img {	
+	.picture img {
 	margin-top: -40px;
 	height:  200px;
 	width: 200px;
@@ -141,6 +134,10 @@ footer {
 }
 #myTimeline  {
 	margin-top: 70px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
 #myTimeline h3 {
 	font-size: 30px;
@@ -167,7 +164,7 @@ section#timeline { width: 90%; margin: 20px auto; padding-bottom: 20px; position
     section#timeline > article > div.panel .panel-body img { float: left; margin: 0 15px 15px 0; }
     section#timeline > article > div.panel .panel-footer { padding: 15px; background-color: #EEE; }
 
-.panel-body h1{ color: #F2CED8; } 
+.panel-body h1{ color: #F2CED8; }
 
     section#timeline > article.inverted > div.panel { float: right; }
         section#timeline > article.inverted > div.panel .panel-body:after { left: -5px; }
@@ -194,29 +191,42 @@ h1 {
    color: white;
    text-shadow: 2px 2px 0 rgba(white, 1);
 }
-form {
-  max-width: 2000px;
-  text-align: center;
-  margin: 20px auto;
+.contactMe {
+	margin-top: 40px;
+	margin-left: 50px;
+	margin-bottom: 50px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
-.cf {
-margin-right: 100px;
+form {
+	display: flex;
+	flex-direction: column;
+	align-items: stretch;
+}
+.droite {
+	float: left;
+}
+.gauche {
+	display: flex;
 }
 form input, form textarea {
   border: 0;
   outline: 0;
   padding: 1em;
-  border-radius: 8px;
-  display: table;
-  width: 90%;
+  border-radius: 10px;
+  /*display: table;*/
+  width: 23%;
   margin-top: 1em;
   font-family: 'Merriweather', sans-serif;
   box-shadow: 0 1px 1px #574a54;
 }
 form input:focus, form textarea:focus {
-  box-shadow: 0 0px 2px #F2CED8 !important;
+  box-shadow: 0 0px 2px #F2CED8;
 }
 form #input-submit {
+	width: 84%;
   color: #574a54;
   background: #EEE;
   cursor: pointer;
@@ -225,39 +235,6 @@ form #input-submit:hover {
 	box-shadow: 0 2px 2px 2px rgba(170, 170, 170, 0.6);
 }
 form textarea {
-	height: 126px;
-}
-.deuxblocs {
-	display: flex;
-	flex-direction: row;
-	width: 100%;
-}
-.half {
-	width: 50%;
-	margin-bottom: 1em;
-}
-.right {
-	width:  100%;
-	display: flex;
-}
-
-.left {
-	float: left;
-	margin-right: 2%;
-}
-@media (max-width: 780px) {
-  .half {
-    width: 100%;
-    float: none;
-    margin-bottom: 0;
-  }
-}
-/* Clearfix */
-.cf:before,
-.cf:after {
-  content: " ";
-  display: table;
-}
-.cf:after {
-  clear: both;
+	width: 79%;
+	height: 120px;
 }
